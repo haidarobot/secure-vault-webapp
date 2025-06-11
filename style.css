@@ -1,125 +1,20 @@
 /* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-
-:root {
-    --bg-color: #121212;
-    --card-bg-color: rgba(26, 26, 26, 0.6);
-    --accent-color: #00BFFF; /* DeepSkyBlue */
-    --accent-glow: rgba(0, 191, 255, 0.5);
-    --text-color: #EAEAEA;
-    --text-muted-color: #A0A0A0;
-    --border-color: rgba(0, 191, 255, 0.2);
-    --error-color: #FF4747;
-}
-
-* { margin: 0; padding: 0; box-sizing: border-box; }
-
-body {
-    font-family: 'Poppins', 'Segoe UI', sans-serif;
-    background-color: var(--bg-color);
-    background-image:
-        radial-gradient(circle at 25% 25%, var(--accent-glow) -20%, transparent 30%),
-        radial-gradient(circle at 75% 75%, var(--accent-glow) -20%, transparent 30%);
-    color: var(--text-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
-.main-container { animation: fadeIn 1s ease-in-out; }
-
-.login-card {
-    width: 400px;
-    padding: 40px 30px;
-    background: var(--card-bg-color);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    text-align: center;
-}
-
-.card-header {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: var(--accent-color);
-    margin-bottom: 8px;
-}
-
-.card-subheader {
-    color: var(--text-muted-color);
-    margin-bottom: 30px;
-    font-weight: 300;
-}
-
-.input-group { position: relative; margin-bottom: 20px; }
-
-.input-icon {
-    position: absolute;
-    left: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--text-muted-color);
-    transition: color 0.3s ease;
-}
-
-.input-group input {
-    width: 100%;
-    padding: 15px 15px 15px 45px;
-    background: transparent;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    color: var(--text-color);
-    font-size: 1rem;
-    transition: all 0.3s ease;
-}
-
-.input-group input::placeholder { color: var(--text-muted-color); }
-
-.input-group:focus-within .input-icon { color: var(--accent-color); }
-
-.input-group input:focus {
-    outline: none;
-    border-color: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-glow);
-}
-
-.btn-login {
-    width: 100%;
-    padding: 15px;
-    background: var(--accent-color);
-    border: none;
-    border-radius: 8px;
-    color: var(--bg-color);
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.btn-login:hover {
-    box-shadow: 0 0 20px var(--accent-glow);
-    transform: translateY(-2px);
-}
-
-.error-message {
-    color: var(--error-color);
-    font-size: 0.9rem;
-    text-align: center;
-    margin-top: 16px;
-    min-height: 20px;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-@media (max-width: 480px) {
-    .login-card { width: 90vw; padding: 30px 20px; }
-}
+:root{--bg-color:#121212;--card-bg-color:rgba(26,26,26,0.6);--accent-color:#00BFFF;--accent-glow:rgba(0,191,255,0.5);--text-color:#EAEAEA;--text-muted-color:#A0A0A0;--border-color:rgba(0,191,255,0.2);--error-color:#FF4747}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins','Segoe UI',sans-serif;background-color:var(--bg-color);background-image:radial-gradient(circle at 25% 25%,var(--accent-glow) -20%,transparent 30%),radial-gradient(circle at 75% 75%,var(--accent-glow) -20%,transparent 30%);color:var(--text-color);display:flex;justify-content:center;align-items:center;min-height:100vh;overflow:hidden}
+.main-container{animation:fadeIn 1s ease-in-out}
+.login-card{width:400px;padding:40px 30px;background:var(--card-bg-color);border:1px solid var(--border-color);border-radius:16px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 8px 32px 0 rgba(0,0,0,0.37);text-align:center}
+.card-header{font-size:2rem;font-weight:700;letter-spacing:2px;color:var(--accent-color);margin-bottom:8px}
+.card-subheader{color:var(--text-muted-color);margin-bottom:30px;font-weight:300}
+.input-group{position:relative;margin-bottom:20px}
+.input-icon{position:absolute;left:15px;top:50%;transform:translateY(-50%);color:var(--text-muted-color);transition:color .3s ease}
+.input-group input{width:100%;padding:15px 15px 15px 45px;background:transparent;border:1px solid var(--border-color);border-radius:8px;color:var(--text-color);font-size:1rem;transition:all .3s ease}
+.input-group input::placeholder{color:var(--text-muted-color)}
+.input-group:focus-within .input-icon{color:var(--accent-color)}
+.input-group input:focus{outline:none;border-color:var(--accent-color);box-shadow:0 0 15px var(--accent-glow)}
+.btn-login{width:100%;padding:15px;background:var(--accent-color);border:none;border-radius:8px;color:var(--bg-color);font-size:1.1rem;font-weight:600;letter-spacing:1px;cursor:pointer;transition:all .3s ease}
+.btn-login:hover{box-shadow:0 0 20px var(--accent-glow);transform:translateY(-2px)}
+.error-message{color:var(--error-color);font-size:.9rem;text-align:center;margin-top:16px;min-height:20px}
+@keyframes fadeIn{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}
+@media (max-width:480px){.login-card{width:90vw;padding:30px 20px}}

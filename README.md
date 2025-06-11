@@ -1,19 +1,21 @@
 # Secure Vault - Manajer Password Pribadi
 
-Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara lokal di dalam browser, dibuat sebagai proyek latihan untuk mendalami konsep HTML, CSS, JavaScript, dan Web Storage API (`localStorage`).
+Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara lokal di dalam browser. Proyek ini berevolusi dari penampil data statis menjadi aplikasi interaktif dengan fungsionalitas penuh.
 
 ---
 
-##  Tampilan Aplikasi (Desain Awal)
+##  Tampilan & Fitur Aplikasi
 
+Berikut adalah showcase dari evolusi tampilan dan fitur Secure Vault.
+
+#### v3.0 - Fitur Lanjutan (Pencarian & Tema)
 <p align="center">
-  <img src="images/login-page.png" alt="Tampilan Halaman Login" width="45%">
-  &nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="images/dashboard-page.png" alt="Tampilan Halaman Dashboard Awal" width="45%">
+  <img src="images/v3-fitur-pencarian.png" alt="Tampilan Fitur Pencarian" width="48%">
+  &nbsp;
+  <img src="images/v3-tema-terang.png" alt="Tampilan Tema Terang" width="48%">
 </p>
 
-##  Tampilan Fitur v2 (Fungsionalitas CRUD)
-
+#### v2.0 - Fungsionalitas CRUD
 <p align="center">
   <img src="images/v2-dashboard-crud.png" alt="Tampilan Dashboard dengan tombol CRUD" width="32%">
   &nbsp;
@@ -22,78 +24,58 @@ Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara loka
   <img src="images/v2-modal-edit.png" alt="Modal untuk mengedit data" width="32%">
 </p>
 
-> *Dari kiri ke kanan: Tampilan dashboard baru dengan tombol Edit & Hapus, Modal pop-up untuk menambah akun, dan Modal untuk mengedit akun yang sudah ada.*
+#### v1.0 - Desain Awal
+<p align="center">
+  <img src="images/login-page.png" alt="Tampilan Halaman Login" width="45%">
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="images/dashboard-page.png" alt="Tampilan Halaman Dashboard Awal" width="45%">
+</p>
 
 ---
 
-##  Konsep & Cara Kerja
+##  Riwayat Pembaruan (Changelog)
 
-Aplikasi ini adalah **Client-Side Application**. Artinya, tidak ada server backend yang memproses atau menyimpan data. Semua logika, tampilan, dan penyimpanan terjadi sepenuhnya di dalam browser pengguna, menggunakan `localStorage` sebagai databasenya. Setiap pengguna memiliki data yang terisolasi dan pribadi.
+### v3.0 - Fitur Lanjutan & Peningkatan UX (Update Terbaru)
+*Tanggal: 11 Juni 2025*
+- **Menambahkan Fungsionalitas Pencarian:** Mengimplementasikan kolom pencarian *real-time* untuk memfilter data di tabel berdasarkan situs atau username.
+- **Memberikan Opsi Tema (Terang/Gelap):** Menambahkan tombol untuk beralih antara tema gelap (default) dan tema terang. Pilihan pengguna disimpan di `localStorage` agar persisten.
+- **Menerapkan Enkripsi Sederhana (Base64):** Semua data password kini di-encode ke format Base64 sebelum disimpan di `localStorage` untuk menyamarkan data dari penglihatan biasa.
 
----
+### v2.0 - Aplikasi Interaktif dengan `localStorage`
+- **Migrasi Penyimpanan ke `localStorage`:** Mengubah fundamental aplikasi dari membaca file `data.js` statis menjadi menggunakan `localStorage` browser. Ini memungkinkan data menjadi dinamis dan personal untuk setiap pengguna.
+- **Implementasi Fungsionalitas CRUD Penuh:**
+  - **Create:** Fitur "Tambah Akun" melalui form modal.
+  - **Update:** Fitur "Edit" data yang sudah ada.
+  - **Delete:** Fitur "Hapus" data dengan konfirmasi.
+- **Peningkatan UX dengan Notifikasi "Toast":** Mengganti `alert()` dengan notifikasi yang lebih modern dan tidak mengganggu.
 
-##  Fitur Utama
-
-- **Otentikasi Lokal:** Halaman login sederhana untuk melindungi akses ke dashboard.
-- **CRUD Penuh:** Fungsionalitas **Create, Read, Update, & Delete** untuk mengelola data password.
-- **Penyimpanan Persisten:** Menggunakan **`localStorage`** browser untuk menyimpan data secara permanen.
-- **Fitur Bantuan:** Tombol "Copy to Clipboard" dan "Toggle Visibility".
-- **Desain Modern & Responsif:** Antarmuka yang elegan dengan tema gelap.
-
----
-
-##  Catatan Pembaruan Terbaru (Upgrade ke v2.0)
-
-Versi terbaru dari Secure Vault ini merupakan perombakan total dari versi awalnya. Fokus utama adalah mengubah aplikasi dari "penampil data" statis menjadi manajer password yang dinamis dan interaktif. Berikut adalah rincian pembaruan utamanya:
-
-* **Perubahan Fundamental Mekanisme Penyimpanan:**
-    * **Dari `data.js` ke `localStorage`:** Aplikasi tidak lagi membaca data secara langsung dari file `data.js`. Sekarang, semua data password disimpan dan dikelola di dalam `localStorage` browser.
-    * **Peran Baru `data.js`:** File `data.js` kini hanya berfungsi sebagai "bibit data" yang akan dimuat ke `localStorage` **hanya saat aplikasi pertama kali dijalankan**.
-
-* **Implementasi Fungsionalitas CRUD Penuh:**
-    * **CREATE (Tambah):** Menambahkan tombol "Tambah Akun Baru" yang memunculkan sebuah modal untuk memasukkan data baru.
-    * **UPDATE (Edit):** Setiap baris data kini memiliki tombol "Edit" (ikon pensil) untuk mengubah detail.
-    * **DELETE (Hapus):** Menambahkan tombol "Hapus" (ikon tong sampah) lengkap dengan jendela konfirmasi.
-
-* **Peningkatan Antarmuka & Pengalaman Pengguna (UI/UX):**
-    * **Modal Interaktif:** Alur kerja yang lebih intuitif dengan form pop-up untuk semua aksi penambahan dan pengeditan data.
-    * **Notifikasi "Toast":** Mengganti `alert()` dengan notifikasi yang tidak mengganggu untuk memberikan umpan balik.
+### v1.0 - Rilis Awal (Read-Only)
+- **Desain Antarmuka Futuristik:** Membangun desain awal aplikasi dengan tema gelap hitam-biru.
+- **Fungsionalitas Dasar:** Aplikasi hanya dapat menampilkan data password yang di-hardcode di dalam file `data.js`.
+- **Fitur Bantuan:** Tombol "Copy to Clipboard" dan "Toggle Visibility" untuk password.
 
 ---
 
 ##  Teknologi yang Digunakan
 
-- **Frontend:** HTML5, CSS3 (Flexbox), JavaScript (ES6)
+- **Frontend:** HTML5, CSS3 (Flexbox & CSS Variables), JavaScript (ES6)
 - **Web Storage API:** `localStorage`
 - **Ikon:** Font Awesome
 - **Version Control:** Git & GitHub
 
 ---
 
-##  Cara Menjalankan Secara Lokal
+##  Cara Menjalankan
 
-1.  **Clone repository ini.**
-2.  **Masuk ke direktori proyek.**
-3.  **Buka file `index.html`** langsung di browser.
-4.  **Login ke Aplikasi** menggunakan kredensial dari `script.js`:
-    - **Username:** `user`
-    - **Password:** `password`
-5.  **Mulai Kelola Data:** Data contoh dari `data.js` akan dimuat saat pertama kali dijalankan. Selanjutnya, semua datamu akan tersimpan di `localStorage` browser-mu.
+1.  Clone repository ini.
+2.  Buka file `index.html` langsung di browser.
+3.  Login menggunakan: Username: `user`, Password: `password`.
+4.  Aplikasi siap digunakan.
 
 ---
 
 ## ⚠️ Peringatan Keamanan
 
-- **HANYA UNTUK LATIHAN:** Dirancang **khusus untuk tujuan pembelajaran**.
-- **DATA TIDAK TERENKRIPSI:** Data di `localStorage` tidak terenkripsi dan dapat dilihat oleh siapa saja dengan akses fisik ke komputer melalui **Developer Tools (F12)**.
+- **UNTUK LATIHAN:** Dirancang **khusus untuk tujuan pembelajaran**.
+- **ENKRIPSI LEMAH:** Base64 adalah *encoding*, bukan enkripsi kuat. Data dapat dengan mudah di-decode.
 - **JANGAN GUNAKAN PASSWORD ASLI.**
-- **REPOSITORY HARUS PRIVATE.**
-
----
-
-##  Rencana Pengembangan
-
-- [x]  **Menggunakan `localStorage` browser untuk menyimpan data.**
-- [ ]  Menambahkan fitur enkripsi sederhana (misal Base64) sebelum menyimpan data.
-- [ ]  Menambahkan fungsionalitas pencarian untuk memfilter data di tabel.
-- [ ]  Memberikan opsi tema (terang/gelap) kepada pengguna.
