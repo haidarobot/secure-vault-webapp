@@ -21,7 +21,7 @@
 body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
     background-color: var(--bg-color);
-    background-image: 
+    background-image:
         radial-gradient(circle at 25% 25%, var(--accent-glow) -20%, transparent 30%),
         radial-gradient(circle at 75% 75%, var(--accent-glow) -20%, transparent 30%);
     color: var(--text-color);
@@ -91,17 +91,15 @@ body {
     color: var(--text-muted-color);
 }
 
+.input-group:focus-within .input-icon {
+    color: var(--accent-color);
+}
+
 .input-group input:focus {
     outline: none;
     border-color: var(--accent-color);
     box-shadow: 0 0 15px var(--accent-glow);
 }
-
-.input-group input:focus + .input-icon, /* This might not work due to sibling selector limitation */
-.input-group:focus-within .input-icon { /* This is the correct way */
-    color: var(--accent-color);
-}
-
 
 .btn-login {
     width: 100%;
@@ -118,13 +116,8 @@ body {
 }
 
 .btn-login:hover {
-    background: #00AADD; /* Slightly different shade */
     box-shadow: 0 0 20px var(--accent-glow);
     transform: translateY(-2px);
-}
-
-.btn-login:active {
-    transform: translateY(0);
 }
 
 .error-message {
@@ -140,7 +133,6 @@ body {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* Responsive */
 @media (max-width: 480px) {
     .login-card {
         width: 90vw;
