@@ -12,11 +12,7 @@
     --table-row-hover-bg: rgba(0, 191, 255, 0.05);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
@@ -25,11 +21,7 @@ body {
     animation: fadeIn 0.8s ease-in-out;
 }
 
-.dashboard-container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 20px;
-}
+.dashboard-container { max-width: 1100px; margin: 40px auto; padding: 20px; }
 
 .dashboard-header {
     display: flex;
@@ -40,12 +32,7 @@ body {
     border-bottom: 1px solid var(--border-color);
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    color: var(--accent-color);
-}
+.logo { font-size: 1.8rem; font-weight: 700; letter-spacing: 1.5px; color: var(--accent-color); }
 
 .btn {
     padding: 10px 20px;
@@ -59,100 +46,60 @@ body {
     gap: 8px;
 }
 
-.btn-logout {
-    background: transparent;
-    border: 1px solid var(--text-muted-color);
-    color: var(--text-muted-color);
+.btn-logout { background: transparent; border: 1px solid var(--text-muted-color); color: var(--text-muted-color); }
+.btn-logout:hover { background: var(--accent-color); color: var(--bg-color); border-color: var(--accent-color); box-shadow: 0 0 15px var(--accent-glow); }
+
+.table-container { background-color: #1A1A1A; border: 1px solid var(--border-color); border-radius: 12px; overflow: hidden; }
+
+.password-table { width: 100%; border-collapse: collapse; }
+.password-table th, .password-table td { padding: 15px 20px; text-align: left; vertical-align: middle; }
+.password-table thead { background-color: var(--table-header-bg); }
+.password-table th { font-weight: 600; color: var(--accent-color); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
+.password-table tbody tr { border-bottom: 1px solid var(--border-color); transition: background-color 0.3s ease; }
+.password-table tbody tr:last-child { border-bottom: none; }
+.password-table tbody tr:hover { background-color: var(--table-row-hover-bg); }
+
+.password-cell, .action-buttons { display: flex; align-items: center; gap: 10px; }
+.btn-action { background: none; border: none; color: var(--text-muted-color); cursor: pointer; font-size: 1.2rem; transition: color 0.3s ease, transform 0.3s ease; padding: 5px; }
+.btn-action:hover { color: var(--accent-color); transform: scale(1.1); }
+
+/* Tombol dan Modal Styles */
+.btn-add { background-color: var(--accent-color); color: var(--bg-color); border: 1px solid var(--accent-color); margin-right: 15px; }
+.btn-add:hover { background-color: #00aadd; box-shadow: 0 0 15px var(--accent-glow); }
+
+.modal-backdrop {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex; justify-content: center; align-items: center; z-index: 1000;
+    animation: fadeIn 0.3s ease;
 }
 
-.btn-logout:hover {
-    background: var(--accent-color);
-    color: var(--bg-color);
-    border-color: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-glow);
+.modal-content {
+    background: var(--card-bg-color, rgba(26, 26, 26, 0.8)); padding: 30px; border-radius: 16px;
+    border: 1px solid var(--border-color); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    width: 90%; max-width: 500px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
+.modal-content h2 { color: var(--accent-color); margin-bottom: 25px; text-align: center; }
 
-.table-container {
-    background-color: #1A1A1A;
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    overflow: hidden;
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; margin-bottom: 8px; color: var(--text-muted-color); font-weight: 500; }
+.form-group input {
+    width: 100%; padding: 12px; background: transparent; border: 1px solid var(--border-color);
+    border-radius: 8px; color: var(--text-color); font-size: 1rem; transition: all 0.3s ease;
 }
+.form-group input:focus { outline: none; border-color: var(--accent-color); box-shadow: 0 0 15px var(--accent-glow); }
 
-.password-table {
-    width: 100%;
-    border-collapse: collapse;
-}
+.form-actions { display: flex; justify-content: flex-end; gap: 15px; margin-top: 30px; }
 
-.password-table th, .password-table td {
-    padding: 15px 20px;
-    text-align: left;
-    vertical-align: middle;
-}
+.btn-cancel { background: transparent; border: 1px solid var(--text-muted-color); color: var(--text-muted-color); }
+.btn-cancel:hover { background-color: #495057; border-color: #495057; }
 
-.password-table thead {
-    background-color: var(--table-header-bg);
-}
+.btn-save { background-color: var(--accent-color); color: var(--bg-color); border: none; }
+.btn-save:hover { background-color: #00aadd; }
 
-.password-table th {
-    font-weight: 600;
-    color: var(--accent-color);
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    letter-spacing: 0.5px;
-}
-
-.password-table tbody tr {
-    border-bottom: 1px solid var(--border-color);
-    transition: background-color 0.3s ease;
-}
-
-.password-table tbody tr:last-child {
-    border-bottom: none;
-}
-
-.password-table tbody tr:hover {
-    background-color: var(--table-row-hover-bg);
-}
-
-.password-cell {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.action-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.btn-action {
-    background: none;
-    border: none;
-    color: var(--text-muted-color);
-    cursor: pointer;
-    font-size: 1.2rem;
-    transition: color 0.3s ease, transform 0.3s ease;
-    padding: 5px;
-}
-
-.btn-action:hover {
-    color: var(--accent-color);
-    transform: scale(1.1);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 @media (max-width: 768px) {
-    .dashboard-container {
-        margin: 20px auto;
-        padding: 15px;
-    }
-    .password-table {
-        display: block;
-        overflow-x: auto;
-    }
+    .dashboard-container { margin: 20px auto; padding: 15px; }
+    .password-table { display: block; overflow-x: auto; }
 }

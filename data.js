@@ -1,24 +1,16 @@
 // data.js
+// Data ini hanya akan digunakan SEKALI saat pertama kali aplikasi dijalankan
+// untuk mengisi localStorage jika masih kosong.
 
 const passwordEntries = [
   {
     site: "Google",
-    username: "majumundur@ex.com",
-    password: "forwardbackward"
+    username: "glogalgalab@ex.com",
+    password: "glogalgalab"
   },
   {
     site: "GitHub",
     username: "haidar-dev",
-    password: "git@#$dollarindonesia"
-  },
-  {
-    site: "Bank Digital",
-    username: "081234567890",
-    password: "90099900"
-  },
-  {
-    site: "LMS Kampus",
-    username: "2201234567",
-    password: "PasswordLMS"
+    password: "polisibaik"
   }
 ];

@@ -1,5 +1,4 @@
 // script.js
-
 const correctUsername = "user";
 const correctPassword = "password";
 
@@ -10,11 +9,7 @@ const errorMessage = document.getElementById("errorMessage");
 
 loginForm.addEventListener("submit", function(event) {
     event.preventDefault();
-
-    const enteredUsername = usernameInput.value;
-    const enteredPassword = passwordInput.value;
-
-    if (enteredUsername === correctUsername && enteredPassword === correctPassword) {
+    if (usernameInput.value === correctUsername && passwordInput.value === correctPassword) {
         alert("Login Berhasil! Selamat datang, Haidar!");
         window.location.href = "dashboard.html";
     } else {

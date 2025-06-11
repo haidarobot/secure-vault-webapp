@@ -12,11 +12,7 @@
     --error-color: #FF4747;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: 'Poppins', 'Segoe UI', sans-serif;
@@ -32,9 +28,7 @@ body {
     overflow: hidden;
 }
 
-.main-container {
-    animation: fadeIn 1s ease-in-out;
-}
+.main-container { animation: fadeIn 1s ease-in-out; }
 
 .login-card {
     width: 400px;
@@ -62,10 +56,7 @@ body {
     font-weight: 300;
 }
 
-.input-group {
-    position: relative;
-    margin-bottom: 20px;
-}
+.input-group { position: relative; margin-bottom: 20px; }
 
 .input-icon {
     position: absolute;
@@ -87,13 +78,9 @@ body {
     transition: all 0.3s ease;
 }
 
-.input-group input::placeholder {
-    color: var(--text-muted-color);
-}
+.input-group input::placeholder { color: var(--text-muted-color); }
 
-.input-group:focus-within .input-icon {
-    color: var(--accent-color);
-}
+.input-group:focus-within .input-icon { color: var(--accent-color); }
 
 .input-group input:focus {
     outline: none;
@@ -134,8 +121,5 @@ body {
 }
 
 @media (max-width: 480px) {
-    .login-card {
-        width: 90vw;
-        padding: 30px 20px;
-    }
+    .login-card { width: 90vw; padding: 30px 20px; }
 }

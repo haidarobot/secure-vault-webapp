@@ -11,9 +11,14 @@
     <div class="dashboard-container">
         <header class="dashboard-header">
             <h1 class="logo">SECURE VAULT</h1>
-            <a href="index.html" class="btn btn-logout">
-                <i class="fa-solid fa-right-from-bracket"></i> Logout
-            </a>
+            <div>
+                <button id="addEntryBtn" class="btn btn-add">
+                    <i class="fa-solid fa-plus"></i> Tambah Akun Baru
+                </button>
+                <a href="index.html" class="btn btn-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i> Logout
+                </a>
+            </div>
         </header>
 
         <main class="table-container">
@@ -30,6 +35,31 @@
                     </tbody>
             </table>
         </main>
+    </div>
+
+    <div id="entryModal" class="modal-backdrop" style="display: none;">
+        <div class="modal-content">
+            <h2 id="modalTitle">Tambah Akun Baru</h2>
+            <form id="entryForm">
+                <input type="hidden" id="entryIndex">
+                <div class="form-group">
+                    <label for="siteInput">Situs/Aplikasi</label>
+                    <input type="text" id="siteInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="usernameInput">Username</label>
+                    <input type="text" id="usernameInput" required>
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput">Password</label>
+                    <input type="password" id="passwordInput" required>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="cancelBtn" class="btn btn-cancel">Batal</button>
+                    <button type="submit" class="btn btn-save">Simpan</button>
+                </div>
+            </form>
+        </div>
     </div>
 
     <script src="data.js"></script>
