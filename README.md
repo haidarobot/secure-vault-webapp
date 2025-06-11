@@ -4,7 +4,7 @@ Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara loka
 
 ---
 
-## 🚀 Tampilan Aplikasi (Desain Awal)
+##  Tampilan Aplikasi (Desain Awal)
 
 <p align="center">
   <img src="images/login-page.png" alt="Tampilan Halaman Login" width="45%">
@@ -12,7 +12,7 @@ Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara loka
   <img src="images/dashboard-page.png" alt="Tampilan Halaman Dashboard Awal" width="45%">
 </p>
 
-## ✨ Tampilan Fitur v2 (Fungsionalitas CRUD)
+##  Tampilan Fitur v2 (Fungsionalitas CRUD)
 
 <p align="center">
   <img src="images/v2-dashboard-crud.png" alt="Tampilan Dashboard dengan tombol CRUD" width="32%">
@@ -26,13 +26,13 @@ Aplikasi web 100% client-side untuk mengelola dan menyimpan password secara loka
 
 ---
 
-## 💡 Konsep & Cara Kerja
+##  Konsep & Cara Kerja
 
 Aplikasi ini adalah **Client-Side Application**. Artinya, tidak ada server backend yang memproses atau menyimpan data. Semua logika, tampilan, dan penyimpanan terjadi sepenuhnya di dalam browser pengguna, menggunakan `localStorage` sebagai databasenya. Setiap pengguna memiliki data yang terisolasi dan pribadi.
 
 ---
 
-## ⭐ Fitur Utama
+##  Fitur Utama
 
 - **Otentikasi Lokal:** Halaman login sederhana untuk melindungi akses ke dashboard.
 - **CRUD Penuh:** Fungsionalitas **Create, Read, Update, & Delete** untuk mengelola data password.
@@ -42,7 +42,7 @@ Aplikasi ini adalah **Client-Side Application**. Artinya, tidak ada server backe
 
 ---
 
-## 📜 Catatan Pembaruan Terbaru (Upgrade ke v2.0)
+##  Catatan Pembaruan Terbaru (Upgrade ke v2.0)
 
 Versi terbaru dari Secure Vault ini merupakan perombakan total dari versi awalnya. Fokus utama adalah mengubah aplikasi dari "penampil data" statis menjadi manajer password yang dinamis dan interaktif. Berikut adalah rincian pembaruan utamanya:
 
@@ -61,7 +61,7 @@ Versi terbaru dari Secure Vault ini merupakan perombakan total dari versi awalny
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
+##  Teknologi yang Digunakan
 
 - **Frontend:** HTML5, CSS3 (Flexbox), JavaScript (ES6)
 - **Web Storage API:** `localStorage`
@@ -70,7 +70,7 @@ Versi terbaru dari Secure Vault ini merupakan perombakan total dari versi awalny
 
 ---
 
-## ⚙️ Cara Menjalankan Secara Lokal
+##  Cara Menjalankan Secara Lokal
 
 1.  **Clone repository ini.**
 2.  **Masuk ke direktori proyek.**
@@ -91,9 +91,9 @@ Versi terbaru dari Secure Vault ini merupakan perombakan total dari versi awalny
 
 ---
 
-## 🎯 Rencana Pengembangan
+##  Rencana Pengembangan
 
-- [x] ✅ **Menggunakan `localStorage` browser untuk menyimpan data.**
-- [ ] 💡 Menambahkan fitur enkripsi sederhana (misal Base64) sebelum menyimpan data.
-- [ ] 🔍 Menambahkan fungsionalitas pencarian untuk memfilter data di tabel.
-- [ ] 🎨 Memberikan opsi tema (terang/gelap) kepada pengguna.
+- [x]  **Menggunakan `localStorage` browser untuk menyimpan data.**
+- [ ]  Menambahkan fitur enkripsi sederhana (misal Base64) sebelum menyimpan data.
+- [ ]  Menambahkan fungsionalitas pencarian untuk memfilter data di tabel.
+- [ ]  Memberikan opsi tema (terang/gelap) kepada pengguna.
